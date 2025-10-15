@@ -27,7 +27,7 @@ def main():
     df = pd.read_csv(train_path)
     model = train_model(df)
 
-    joblib.dump(model, os.path.join(model_dir, "model_logreg.pkl"))
+    joblib.dump(model, os.path.join(model_dir, "model.pkl"))
     print("Logistic Regression model saved successfully.")
 
 if __name__ == "__main__":
