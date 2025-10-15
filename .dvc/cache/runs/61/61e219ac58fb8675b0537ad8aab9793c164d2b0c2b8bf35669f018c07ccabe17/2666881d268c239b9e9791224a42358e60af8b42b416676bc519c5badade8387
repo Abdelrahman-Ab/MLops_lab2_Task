@@ -1,0 +1,15 @@
+cmd: python train.py
+deps:
+- path: Data/processed/train.csv
+  hash: md5
+  md5: 2ada02d616ae144289aa26ceca064e13
+  size: 23063
+- path: train.py
+  hash: md5
+  md5: b867aef14c9b9128fe4f5168cdda7627
+  size: 1177
+outs:
+- path: Models/model.pkl
+  hash: md5
+  md5: 118a5077835b24e7f037248d9f5b5eaa
+  size: 2855
