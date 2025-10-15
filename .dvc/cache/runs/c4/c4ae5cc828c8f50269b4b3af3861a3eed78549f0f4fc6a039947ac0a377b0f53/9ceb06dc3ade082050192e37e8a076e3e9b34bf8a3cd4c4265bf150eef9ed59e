@@ -1,0 +1,19 @@
+cmd: python preprocess.py
+deps:
+- path: Data/retail_sales_dataset.csv
+  hash: md5
+  md5: 86221ffc719eab533bda1db00b3d1b40
+  size: 51673
+- path: preprocess.py
+  hash: md5
+  md5: b6aebd6f9d04b5c01572dc7dd2a5bc93
+  size: 1949
+outs:
+- path: Data/processed/test.csv
+  hash: md5
+  md5: 1e59d3512fabe48ecd7d93e3fa76f8a4
+  size: 5865
+- path: Data/processed/train.csv
+  hash: md5
+  md5: 2ada02d616ae144289aa26ceca064e13
+  size: 23063
