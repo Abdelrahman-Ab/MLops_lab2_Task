@@ -1,0 +1,30 @@
+stages:
+  preprocess:
+    cmd: python preprocess.py
+    deps:
+      - preprocess.py
+      - Data/retail_sales_dataset.csv
+    outs:
+      - Data/processed/train.csv
+      - Data/processed/test.csv
+
+  train:
+    cmd: python train.py
+    deps:
+      - train.py
+      - Data/processed/train.csv
+    outs:
+      - Models/model.pkl
+
+  validate:
+    cmd: python validate.py
+    deps:
+      - validate.py
+      - Models/model.pkl
+      - Data/processed/test.csv
+    metrics:
+      - Reports/metrics.json:
+          cache: false
+    plots:
+      - Reports/confusion_matrix.png:
+          cache: false
